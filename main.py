@@ -1,6 +1,18 @@
-from typing import Union
+from typing import Optional, Union
 
 from fastapi import FastAPI
+
+from pydantic import BaseModel
+
+
+class Sensor(BaseModel):
+    serailNumber:int
+    temprature:int
+    location:str
+    validity:str
+    id:int
+    status: Optional[bool]
+
 
 app = FastAPI()
 
@@ -13,4 +25,8 @@ def read_root():
 @app.get("/sensors/{sensor_id}")
 def read_item(sensor_id: int, location: Union[str, None] = None):
     return {"sensor_id": sensor_id, "location": location,"temprature":'20'}
+
+@app.post("/sensor")
+def create_sensor(sensor:Sensor):
+    return sensor
 
