@@ -4,6 +4,8 @@ from fastapi import FastAPI
 
 from pydantic import BaseModel
 
+import uvicorn
+
 
 class Sensor(BaseModel):
     serailNumber:int
@@ -29,4 +31,8 @@ def read_item(sensor_id: int, location: Union[str, None] = None):
 @app.post("/sensor")
 def create_sensor(sensor:Sensor):
     return sensor
+
+if __name__ == "__main__":
+    uvicorn.run(app,host="127.0.0.1",port=9000)
+
 
