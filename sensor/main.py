@@ -41,4 +41,13 @@ def create_sensor(request:schemas.Sensor,db:Session=Depends(get_db)):
     db.refresh(new_sensor)
     return new_sensor
 
+@app.get('/sensors')
+def all(db:Session=Depends(get_db)):
+    sensors= db.query(models.Sensor).all()
+    return sensors
 
+
+@app.get('/sensors/{id}')
+def show(id:int,db:Session=Depends(get_db)):
+    sensor= db.query(models.Sensor).filter(models.Sensor.id == id).first()
+    return sensor
