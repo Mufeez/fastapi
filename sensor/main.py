@@ -29,9 +29,7 @@ def read_root():
     return "Server Is Running"
 
 
-@app.get("/sensors/{sensor_id}")
-def read_item(sensor_id: int, location: Union[str, None] = None):
-    return {"sensor_id": sensor_id, "location": location,"temprature":'20'}
+
 
 @app.post("/sensor")
 def create_sensor(request:schemas.Sensor,db:Session=Depends(get_db)):
