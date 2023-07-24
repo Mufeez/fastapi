@@ -2,7 +2,7 @@
 
 # python -m sensor-env
 
-2.Install the libraries
+2.Install the libraries using pip3
 
 # pip3 install -r requirements.txt
 
