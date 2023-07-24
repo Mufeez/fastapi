@@ -4,7 +4,7 @@
 
 2.Install the libraries
 
-# npm install -r requirements.txt
+# pip3 install -r requirements.txt
 
 3.start the server
 
