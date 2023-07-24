@@ -1,11 +1,11 @@
-create a virtual environment with
+1.create a virtual environment with
 
-# python venv -m sensor-env
+# python -m sensor-env
 
-Install the libraries
+2.Install the libraries
 
 # npm install -r requirements.txt
 
-start the server
+3.start the server
 
 # uvicorn sensor.main:app --reload
