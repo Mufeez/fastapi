@@ -1,6 +1,6 @@
 1.create a virtual environment with
 
-# python venv -m sensor-env
+# python -m sensor-env
 
 2.Install the libraries
 
