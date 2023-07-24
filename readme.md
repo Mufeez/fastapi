@@ -2,9 +2,9 @@
 
 # python -m venv sensor-env
 
-2.Install the libraries
+2.Install the libraries using pip3
 
-# npm install -r requirements.txt
+# pip3 install -r requirements.txt
 
 3.start the server
 
